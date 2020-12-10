@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  margin: 1rem;
+}
+
+.bottle {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+
+  overflow: hidden;
+
+  height: 100px;
+  width: 25px;
+
+  border: 2px solid black;
+  border-radius: 4px 4px 25px 25px;
+}
+
+.bottle:focus {
+  box-shadow: 0 0 1pt 3pt lightskyblue;
+}
