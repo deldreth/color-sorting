@@ -1,5 +1,5 @@
 import { Component, Prop, Watch, h } from '@stencil/core';
-import type { JSX } from '@stencil/core';
+import classNames from 'classnames';
 
 @Component({
   tag: 'a-bottle',
@@ -11,32 +11,54 @@ export class Bottle {
   /**
    * The list of colors represented as an array
    */
-  @Prop() colors: string = '';
+  @Prop()
+  colors: string = '';
+
+  /**
+   * Indicate that the bottle is selected
+   */
+  @Prop()
+  selected: boolean = false;
+
+  /**
+   * Indicate that the bottle cannot be targeted
+   */
+  @Prop()
+  warning: boolean = false;
+
+  /**
+   * Indicate a winning state
+   */
+  @Prop()
+  finished: boolean = false;
 
   @Watch('colors')
   private parseColors(nextColors: string) {
-    this._colors = JSON.parse(nextColors);
+    this._colors = new Array(4).fill('transparent', 0, 4);
+    const parsedColors = JSON.parse(nextColors);
+
+    parsedColors.forEach((color, index) => {
+      this._colors[index - parsedColors.length + this._colors.length] = color;
+    });
   }
 
   componentWillLoad() {
     this.parseColors(this.colors);
   }
 
-  private renderColors(): JSX.Element[] {
-    const colors = new Array(4).fill('transparent', 0, 4);
-
-    this._colors.forEach((color, index) => {
-      colors[index - this._colors.length + colors.length] = color;
+  render() {
+    const classes = classNames('bottle', {
+      selected: this.selected,
+      warning: this.warning,
+      finished: this.finished,
     });
 
-    return colors.map(color => <a-color color={color}></a-color>);
-  }
-
-  render() {
     return (
-      <div class="bottle" tabIndex={-1}>
+      <div class={classes}>
         <div />
-        {this.renderColors()}
+        {this._colors.map(color => (
+          <a-color color={color}></a-color>
+        ))}
       </div>
     );
   }

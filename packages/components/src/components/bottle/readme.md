@@ -7,9 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description                                | Type     | Default |
-| -------- | --------- | ------------------------------------------ | -------- | ------- |
-| `colors` | `colors`  | The list of colors represented as an array | `string` | `''`    |
+| Property   | Attribute  | Description                                 | Type      | Default |
+| ---------- | ---------- | ------------------------------------------- | --------- | ------- |
+| `colors`   | `colors`   | The list of colors represented as an array  | `string`  | `''`    |
+| `finished` | `finished` | Indicate a winning state                    | `boolean` | `false` |
+| `selected` | `selected` | Indicate that the bottle is selected        | `boolean` | `false` |
+| `warning`  | `warning`  | Indicate that the bottle cannot be targeted | `boolean` | `false` |
 
 
 ## Dependencies

@@ -1,39 +1,27 @@
 {
   "name": "@water-sorting/game",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@water-sorting/components-react": "^0.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
+  "version": "1.0.1",
+  "description": "Stencil App",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rimraf www && stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "@stencil/core": "^2.0.0",
+    "@stencil/router": "^1.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.5.0",
+    "@stencil/redux": "^0.2.0",
+    "@water-sorting/components": "^1.0.1",
+    "bulma": "^0.9.1",
+    "classnames": "^2.2.6",
+    "haunted": "^4.7.1",
+    "lodash": "^4.17.20"
   }
 }

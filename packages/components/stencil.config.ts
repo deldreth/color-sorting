@@ -1,5 +1,4 @@
 import { Config } from '@stencil/core';
-import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'components',
@@ -18,9 +17,5 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
-    reactOutputTarget({
-      componentCorePackage: '@water-sorting/components',
-      proxiesFile: '../components-react/src/components.ts',
-    }),
   ],
 };

@@ -7,10 +7,44 @@
 
     <script type="module" src="/build/components.esm.js"></script>
     <script nomodule src="/build/components.js"></script>
+    <style>
+      body {
+        background-color: #282a36;
+      }
+    </style>
+    <style>
+      .board {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        grid-gap: 1rem 0;
+      }
+    </style>
   </head>
   <body>
+    <div class="board">
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+      <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
+    </div>
     <a-bottle colors='["blue", "green", "yellow", "red"]'></a-bottle>
     <a-bottle colors='["orange"]'></a-bottle>
     <a-bottle colors='["yellow", "purple"]'></a-bottle>
+    <a-bottle selected></a-bottle>
+    <a-bottle warning></a-bottle>
+    <a-bottle colors='["blue", "blue", "blue", "blue"]'></a-bottle>
+
+    <a-bottle finished colors='["blue", "blue", "blue", "blue"]'></a-bottle>
   </body>
 </html>

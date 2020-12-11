@@ -1,0 +1,34 @@
+.app-board-container {
+  position: relative;
+}
+
+.app-board {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  grid-gap: 1rem 0;
+}
+
+.app-board.with-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.app-board.with-four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.app-board.with-five {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.move-count {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: -4rem;
+  font-size: 2rem;
+  color: #44475a;
+}

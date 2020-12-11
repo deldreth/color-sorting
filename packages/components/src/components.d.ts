@@ -11,6 +11,18 @@ export namespace Components {
           * The list of colors represented as an array
          */
         "colors": string;
+        /**
+          * Indicate a winning state
+         */
+        "finished": boolean;
+        /**
+          * Indicate that the bottle is selected
+         */
+        "selected": boolean;
+        /**
+          * Indicate that the bottle cannot be targeted
+         */
+        "warning": boolean;
     }
     interface AColor {
         /**
@@ -43,6 +55,18 @@ declare namespace LocalJSX {
           * The list of colors represented as an array
          */
         "colors"?: string;
+        /**
+          * Indicate a winning state
+         */
+        "finished"?: boolean;
+        /**
+          * Indicate that the bottle is selected
+         */
+        "selected"?: boolean;
+        /**
+          * Indicate that the bottle cannot be targeted
+         */
+        "warning"?: boolean;
     }
     interface AColor {
         /**

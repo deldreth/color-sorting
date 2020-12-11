@@ -1,0 +1,10 @@
+.board-button-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin: 2rem;
+}

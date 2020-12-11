@@ -1,6 +1,6 @@
 {
   "name": "@water-sorting/components",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
@@ -22,7 +22,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1"
+    "@stencil/core": "^2.0.1",
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6"
   },
   "license": "MIT",
   "devDependencies": {

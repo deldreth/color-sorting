@@ -1,0 +1,65 @@
+.menu-button {
+  outline: none;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+  width: 32px;
+}
+
+input {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  opacity: 0;
+  z-index: 2;
+
+  -webkit-touch-callout: none;
+}
+
+span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #6272a4;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+    opacity 0.3s ease;
+  z-index: 20;
+}
+
+span:first-child {
+  transform-origin: 0% 0%;
+}
+
+span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+input.active ~ span {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+  background: #282a36;
+}
+
+input.active ~ span:nth-last-child(3) {
+  opacity: 1;
+  transform: rotate(45deg) translate(1px, -1px);
+}
+
+input.active ~ span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
